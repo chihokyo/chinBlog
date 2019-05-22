@@ -9,8 +9,9 @@
   <!-- CSRF Token -->
   <meta name="csrf-token" content="{{ csrf_token() }}">
 
-  <title>@yield('title', 'chinBlog') - Laravel 博客</title>
-  <meta name="description" content="@yield('description', 'chinBlog')" />
+  <title>@yield('title', 'Chinhokyo BLOG') - {{ setting('site_name', 'BLOG') }}</title>
+  <meta name="description" content="@yield('description', setting('seo_description', '个人学习编程论坛'))" />
+  <meta name="keyword" content="@yield('keyword', setting('seo_keyword', '个人博客,社区,论坛,个人博客'))" />
 
   <!-- Styles -->
   <link href="{{ mix('css/app.css') }}" rel="stylesheet">
